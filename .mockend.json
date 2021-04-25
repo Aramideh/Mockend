@@ -10,7 +10,7 @@
     "body": "string",
     "post": "Post"
   },
-  "sw5": {
+  "Sw": {
     "title": "string",
     "version": "int",
     "release_date": "date",
