@@ -14,6 +14,6 @@
     "title": "string",
     "version": "int",
     "release_date": "date",
-    "comments": "Comment[]"
+    "commentz": "Post"
   }  
 }
