@@ -13,7 +13,6 @@
   "Sw": {
     "title": "string",
     "version": "int",
-    "release_date": "date",
-    "commentz": "Post"
+    "release_date": "date"
   }  
 }
