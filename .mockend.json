@@ -9,5 +9,11 @@
   "Comment": {
     "body": "string",
     "post": "Post"
-  }
+  },
+  "sw5": {
+    "title": "string",
+    "version": "int",
+    "release_date": "date",
+    "comments": "Comment[]"
+  }  
 }
