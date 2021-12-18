@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WMS_Capabilities xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.3.0" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd">
+	<Service>
+		<Name>WMS</Name>
+		<Title>Smallworld GeoSpatial Server WMS.</Title>
+		<OnlineResource xlink:type="simple" xlink:href="http://gis-server:7771/wms?"/>
+	</Service>
+	<Capability>
+		<Request>
+			<GetCapabilities>
+				<Format>text/xml</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xlink:type="simple" xlink:href="http://gis-server:7771/wms?"/>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetCapabilities>
+			<GetMap>
+				<Format>image/png</Format>
+				<Format>image/jpeg</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xlink:type="simple" xlink:href="http://gis-server:7771/wms?"/>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetMap>
+			<GetFeatureInfo>
+				<Format>text/xml</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xlink:type="simple" xlink:href="http://gis-server:7771/wms?"/>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetFeatureInfo>
+		</Request>
+		<Exception>
+			<Format>XML</Format>
+		</Exception>
+		<Layer queryable="1">
+			<Name>Smallworld</Name>
+			<Title>Smallworld generic layer</Title>
+			<CRS>CRS:84</CRS>
+			<CRS>sw:world_miller_wgs84_cm</CRS>
+			<CRS>EPSG:900913</CRS>
+			<CRS>sw:europe_longlat_etrs89_degree</CRS>
+			<CRS>EPSG:4258</CRS>
+			<CRS>EPSG:27700</CRS>
+			<CRS>sw:world_popular_visualisation_spherical_m</CRS>
+			<CRS>EPSG:4326</CRS>
+			<CRS>EPSG:3857</CRS>
+			<CRS>sw:uk_longlat_osgb36_degree</CRS>
+			<CRS>sw:world_longlat_wgs84_degree</CRS>
+			<CRS>sw:uk_british_national_grid_m</CRS>
+			<CRS>sw:uk_british_national_grid_mm</CRS>
+			<CRS>sw:google_mercator</CRS>
+			<CRS>sw:uk_british_national_grid_km</CRS>
+			<EX_GeographicBoundingBox>
+				<westBoundLongitude>-180</westBoundLongitude>
+				<eastBoundLongitude>180</eastBoundLongitude>
+				<southBoundLatitude>-90</southBoundLatitude>
+				<northBoundLatitude>90</northBoundLatitude>
+			</EX_GeographicBoundingBox>
+			<BoundingBox CRS="CRS:84" minx="-180" miny="-90" maxx="180" maxy="90"/>
+			<BoundingBox CRS="sw:world_miller_wgs84_cm" minx="-2003750834.278925" miny="-1469148076.917306" maxx="2003750834.278925" maxy="1469148076.917306"/>
+			<BoundingBox CRS="sw:europe_longlat_etrs89_degree" minx="-180" miny="-90" maxx="180" maxy="90"/>
+			<BoundingBox CRS="EPSG:4258" minx="-90" miny="-180" maxx="90" maxy="180"/>
+			<BoundingBox CRS="EPSG:4326" minx="-90" miny="-180" maxx="90" maxy="180"/>
+			<BoundingBox CRS="sw:uk_longlat_osgb36_degree" minx="-180" miny="-90" maxx="180" maxy="90"/>
+			<BoundingBox CRS="sw:world_longlat_wgs84_degree" minx="-180" miny="-90" maxx="180" maxy="90"/>
+			<Style>
+				<Name>Default</Name>
+				<Title>Default</Title>
+			</Style>
+			<Style>
+				<Name>Plotting</Name>
+				<Title>Plotting</Title>
+			</Style>
+			<Layer queryable="1">
+				<Name>Rest Theme</Name>
+				<Title>Rest Theme</Title>
+			</Layer>
+			<Layer queryable="1">
+				<Name>Electricity</Name>
+				<Title>Electricity</Title>
+			</Layer>
+		</Layer>
+	</Capability>
+</WMS_Capabilities>
